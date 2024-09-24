@@ -1,14 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
+    [SerializeField] List<GameObject> coins;
 
     [SerializeField] float offset = 2.5f;
     [SerializeField] int createCount = 16;
 
     private void Awake()
     {
+        coins.Capacity = 20;
+
         Create();
     }
 
@@ -20,6 +24,8 @@ public class CoinManager : MonoBehaviour
 
             clone.transform.SetParent(gameObject.transform);
             clone.transform.localPosition = new Vector3(0, prefab.transform.position.y, i * offset);
+
+            coins.Add(clone);
         }
     }
 

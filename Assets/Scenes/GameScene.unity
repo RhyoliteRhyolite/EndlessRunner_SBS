@@ -123,6 +123,66 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &136706015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136706016}
+  - component: {fileID: 136706017}
+  - component: {fileID: 136706018}
+  m_Layer: 0
+  m_Name: RoatationGameObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &136706016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136706015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136706017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136706015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 587fb374f6b5d274380736302681c9c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+--- !u!114 &136706018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136706015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde47f46ad8881c48bc2c9ce33c06e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationGameObj: {fileID: 1835702596497185021, guid: 26c4712216615004797d4f66eb7c06a2, type: 3}
+  speed: 0
 --- !u!1001 &200995655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,6 +250,10 @@ PrefabInstance:
     - target: {fileID: 516495753519953558, guid: c5f71786c81be0a48bafc0be63435251, type: 3}
       propertyPath: m_Size.y
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 516495753519953558, guid: c5f71786c81be0a48bafc0be63435251, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2109670777337831394, guid: c5f71786c81be0a48bafc0be63435251, type: 3}
       propertyPath: m_RootOrder
@@ -312,6 +376,10 @@ PrefabInstance:
     - target: {fileID: 4664451514462122151, guid: 3cc00f98e55d4a344814e9b0acaa860f, type: 3}
       propertyPath: m_Size.y
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664451514462122151, guid: 3cc00f98e55d4a344814e9b0acaa860f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4683698669332398923, guid: 3cc00f98e55d4a344814e9b0acaa860f, type: 3}
       propertyPath: m_RootOrder
@@ -998,6 +1066,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1654707217299545408, guid: ab20db4c8e9ff1746ad7cb5e61f0c6fa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7873187647639627562, guid: ab20db4c8e9ff1746ad7cb5e61f0c6fa, type: 3}
       propertyPath: m_Name
       value: Second Road
@@ -1061,6 +1133,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1758215367}
     m_Modifications:
+    - target: {fileID: 5390849720564173427, guid: 99a51376d7d99ee429d3a2d5a828c17b, type: 3}
+      propertyPath: monoScript
+      value: 
+      objectReference: {fileID: 11500000, guid: 587fb374f6b5d274380736302681c9c2, type: 3}
     - target: {fileID: 5390849720564173428, guid: 99a51376d7d99ee429d3a2d5a828c17b, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -1126,6 +1202,10 @@ PrefabInstance:
     - target: {fileID: 2793088074129993660, guid: 9e7a605f1ae817b47b863713c0528210, type: 3}
       propertyPath: m_Size.y
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793088074129993660, guid: 9e7a605f1ae817b47b863713c0528210, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4683698669332398923, guid: 9e7a605f1ae817b47b863713c0528210, type: 3}
       propertyPath: m_RootOrder
