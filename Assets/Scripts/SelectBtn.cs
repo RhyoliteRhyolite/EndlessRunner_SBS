@@ -12,14 +12,14 @@ public class SelectBtn : MonoBehaviour
 
     public void OnEnter()
     {
-        buttonText.fontSize = 100;
+        buttonText.fontSize = 25;
     }
     public void OnLeave()
     {
-        buttonText.fontSize = 75;
+        buttonText.fontSize = 14;
     }
     public void OnSelect()
     {
-        buttonText.fontSize = 50;
+        buttonText.fontSize = 10;
     }
 }
