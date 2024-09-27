@@ -22,7 +22,7 @@ public class SpeedManager : MonoBehaviour
     {
         while (speed < limitSpeed)
         {
-            yield return new WaitForSeconds(5);
+            yield return CoroutineChache.WaitForSecond(10);
 
             speed += increaseValue;
         }
