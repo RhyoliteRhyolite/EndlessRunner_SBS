@@ -2066,10 +2066,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba24e28e1bcd3942be4a0306e761cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   roadLine: 0
   rigidBody: {fileID: 0}
   speed: 25
-  positionX: 2.5
+  positionX: 4
 --- !u!54 &919132148365119108
 Rigidbody:
   m_ObjectHideFlags: 0
