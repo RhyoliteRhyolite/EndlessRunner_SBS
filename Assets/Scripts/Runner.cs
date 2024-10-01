@@ -8,7 +8,7 @@ public enum RoadLine
 
 }
 
-public class Runner : MonoBehaviour
+public class Runner : State
 {
     [SerializeField] Animator animator;
     [SerializeField] RoadLine roadLine;
@@ -23,8 +23,10 @@ public class Runner : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void OnEnable()
+    private new void OnEnable()
     {
+        base.OnEnable();
+
         InputManager.Instance.action += OnKeyUpdate;
     }
 
@@ -67,12 +69,18 @@ public class Runner : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (state == false) return;
+
         OnMovedUpdate();
     }
 
 
-    private void OnDisable()
+    private new void OnDisable()
     {
+        if (state == false) return;
+
+        base.OnDisable();
+
         InputManager.Instance.action -= OnKeyUpdate;
     }
 }

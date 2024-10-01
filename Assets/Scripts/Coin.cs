@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : State
 {
     [SerializeField] GameObject rotationGameObj;
     [SerializeField] float speed;
 
-    private void OnEnable()
+    private new void OnEnable()
     {
+        base.OnEnable();
+
         rotationGameObj = GameObject.Find("RoatationGameObj");
         speed = rotationGameObj.GetComponent<RotationGameObjManager>().Speed;
         transform.localRotation = rotationGameObj.transform.localRotation;

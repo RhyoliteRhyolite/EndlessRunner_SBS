@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoadManager : MonoBehaviour
+public class RoadManager : State
 {
     [SerializeField] float speed = 25.0f;
     [SerializeField] float offset = 40.0f;
@@ -13,6 +13,8 @@ public class RoadManager : MonoBehaviour
     }
     private void Update()
     {
+        if (state == false) return;
+
         for (int i = 0; i < roads.Count; i++)
         {
             roads[i].transform.Translate(Vector3.back * speed * Time.deltaTime);
