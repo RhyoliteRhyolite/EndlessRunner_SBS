@@ -6,7 +6,8 @@ public class State : MonoBehaviour
 
     protected void OnEnable()
     {
-        Debug.Log("Event Register");
+        EventManager.Subscribe(EventType.START, OnExecute);
+        EventManager.Subscribe(EventType.STOP, OnStop);
     }
     protected void OnExecute()
     {
@@ -14,10 +15,12 @@ public class State : MonoBehaviour
     }
     protected void OnStop()
     {
+
         state = false;
     }
     protected void OnDisable()
     {
-        Debug.Log("Event Release");
+        EventManager.UnSubscribe(EventType.START, OnExecute);
+        EventManager.UnSubscribe(EventType.STOP, OnStop);
     }
 }
