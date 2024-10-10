@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ObstacleDisableZone : MonoBehaviour
 {
-    [SerializeField] Obstacle obstacle;
-    [SerializeField] Rigidbody rigidBody;
-
-
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
+        Obstacle obstacle = other.GetComponent<Obstacle>();
 
-
+        if (obstacle != null)
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 }

@@ -49,7 +49,7 @@ public class ObstaclePositionManager : MonoBehaviour
     {
         if (coroutine == null)
         {
-            Debug.Log("Coroutine");
+
             coroutine = StartCoroutine(SetPosition());
         }
 

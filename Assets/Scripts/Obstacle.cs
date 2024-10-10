@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using static IInteractable;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour, IHitable
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Activate()
     {
-        
+        EventManager.Publish(EventType.STOP);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

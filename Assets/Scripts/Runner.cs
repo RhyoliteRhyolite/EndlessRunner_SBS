@@ -1,4 +1,5 @@
 using UnityEngine;
+using static IInteractable;
 
 public enum RoadLine
 {
@@ -16,6 +17,8 @@ public class Runner : State
 
     [SerializeField] float speed = 25.0f;
     [SerializeField] float positionX = 2.5f;
+
+    [SerializeField]
 
     void Awake()
     {
@@ -82,5 +85,15 @@ public class Runner : State
         base.OnDisable();
 
         InputManager.Instance.action -= OnKeyUpdate;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        IHitable hitable = other.GetComponent<IHitable>();
+
+        if (hitable != null)
+        {
+            hitable.Activate();
+        }
     }
 }
